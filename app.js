@@ -8,6 +8,8 @@ const elementTexteWinLoose = document.getElementById("HTMLid_Texte_YouWinOrLoose
 
 // déclaration variable variable...
 let tentativeRestante = 10;
+let MyAudio = new Audio("sound/music1.mp3");
+MyAudio.play();
 
 // Fonction quand on appui sur le btn...
 function CheckTheResult() {
@@ -19,6 +21,11 @@ function CheckTheResult() {
     if (chiffreATrouver === chiffreDuJoueur) {
         elementTexteWinLoose.style.color="lightgreen";
         elementTexteWinLoose.innerHTML = "YOU WIN";
+        elementTexteWinLoose.className="animate__animated animate__bounce animate__infinite";
+        elementChampDeTextePourLaReponseDuJoueur.className="animate__animated animate__zoomOutDown animate__1";
+        MyAudio.pause();
+        MyAudio = new Audio("sound/musicYouWin.mp3");
+        MyAudio.play();
         DeleteIlVousReste();
     // Si trop bas...
     } else if (chiffreATrouver > chiffreDuJoueur) {
@@ -33,6 +40,11 @@ function CheckTheResult() {
         elementTexteWinLoose.style.color="red";
         elementTexteWinLoose.innerHTML = "GAME OVER";
         DeleteIlVousReste();
+        elementTexteWinLoose.className="animate__animated animate__bounceInUp animate__1";
+        elementChampDeTextePourLaReponseDuJoueur.className="animate__animated animate__hinge animate__1";
+        MyAudio.pause();    
+        MyAudio = new Audio("sound/musicGameOver.mp3");
+        MyAudio.play();
     }
 } // fin de la function CheckTheResult()
 

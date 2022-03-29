@@ -7,6 +7,7 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     background-color: black;
+    font-family: 'Pacifico', cursive;
 }
 
 .div1 {
@@ -42,6 +43,7 @@ body {
 
 h1 {
     color: hsl(180, 21%, 21%);
+    font-size: 3rem;
 }
 
 #HTMLid_Texte_IlVousReste{
