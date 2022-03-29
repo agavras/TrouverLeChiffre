@@ -2,7 +2,9 @@
 const btn = document.getElementById("HTMLidBoutton");
 const chiffreATrouver = Math.ceil(Math.random() * 100);
 console.log(chiffreATrouver);
-const elementChampDeTextePourLaReponseDuJoueur = document.getElementById("HTMLid_InputNumber");
+// const elementChampDeTextePourLaReponseDuJoueur = document.getElementById("HTMLid_InputNumber");
+const mySlider=document.getElementById("myRange");
+const myValueText=document.getElementById("valueText");
 const elementTexteIlVousReste = document.getElementById("HTMLid_Texte_IlVousReste");
 const elementTexteWinLoose = document.getElementById("HTMLid_Texte_YouWinOrLoose");
 
@@ -11,9 +13,13 @@ let tentativeRestante = 10;
 let MyAudio = new Audio("sound/music1.mp3");
 MyAudio.play();
 
+mySlider.oninput = function() {
+myValueText.innerHTML = parseInt(mySlider.value);
+}
+
 // Fonction quand on appui sur le btn...
 function CheckTheResult() {
-    let chiffreDuJoueur=parseInt(elementChampDeTextePourLaReponseDuJoueur.value);
+    let chiffreDuJoueur=parseInt(mySlider.value);
     tentativeRestante--;
     elementTexteIlVousReste.innerHTML = `il vous reste ${tentativeRestante} tentative(s)`;
 
@@ -22,18 +28,19 @@ function CheckTheResult() {
         elementTexteWinLoose.style.color="lightgreen";
         elementTexteWinLoose.innerHTML = "YOU WIN";
         elementTexteWinLoose.className="animate__animated animate__bounce animate__infinite";
-        elementChampDeTextePourLaReponseDuJoueur.className="animate__animated animate__zoomOutDown animate__1";
+        mySlider.className="animate__animated animate__zoomOutDown animate__1";
         MyAudio.pause();
         MyAudio = new Audio("sound/musicYouWin.mp3");
         MyAudio.play();
         elementTexteIlVousReste.className="animate__animated animate__bounceOutDown animate__1";
         btn.className="animate__animated animate__bounceOut animate__1";
+        myValueText.innerHTML = " ";
     // Si trop bas...
     } else if (chiffreATrouver > chiffreDuJoueur) {
         elementTexteWinLoose.innerHTML = "Trop petit";
     // Si trop haut...
     } else if (chiffreATrouver < chiffreDuJoueur) {
-        elementTexteWinLoose.innerHTML = "Trop grand";
+        elementTexteWinLoose.className="animate__animated animate__bounceOut animate__1";
     }
 
     // Si le joueur n'a plus de credit...
@@ -42,12 +49,13 @@ function CheckTheResult() {
         elementTexteWinLoose.innerHTML = "GAME OVER";
         // DeleteIlVousReste();
         elementTexteWinLoose.className="animate__animated animate__bounceInUp animate__1";
-        elementChampDeTextePourLaReponseDuJoueur.className="animate__animated animate__hinge animate__1";
+        mySlider.className="animate__animated animate__hinge animate__1";
         MyAudio.pause();    
         MyAudio = new Audio("sound/musicGameOver.mp3");
         MyAudio.play();
         elementTexteIlVousReste.className="animate__animated animate__bounceOutDown animate__1";
         btn.className="animate__animated animate__bounceOut animate__1";
+        myValueText.className="animate__animated animate__bounceOut animate__1";
     }
 } // fin de la function CheckTheResult()
 
