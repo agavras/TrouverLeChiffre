@@ -11,6 +11,7 @@ const elementTexteWinLoose = document.getElementById("HTMLid_Texte_YouWinOrLoose
 let tentativeRestante = 10;
 let MyAudio = new Audio("sound/music1.mp3");
 
+// a partir d'ici le code s'execute quoi qu'il arrive ////////////////
 elementTexteIlVousReste.innerHTML = `il vous reste ${tentativeRestante} tentative(s)`;
 
 // mise a jour Slider => InputNumber...
@@ -23,6 +24,7 @@ elementChampDeTextePourLaReponseDuJoueur.oninput = function() {
     mySlider.value = elementChampDeTextePourLaReponseDuJoueur.value;
 }
 
+// a partir d'ici le code s'execute que si on le demande (voir le html onclick=CheckTheResult()) ////////////////
 // Fonction quand on appui sur le btn...
 function CheckTheResult() {
     MyAudio.play();
