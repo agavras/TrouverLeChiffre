@@ -11,7 +11,6 @@ const elementTexteWinLoose = document.getElementById("HTMLid_Texte_YouWinOrLoose
 // déclaration variable variable...
 let tentativeRestante = 10;
 let MyAudio = new Audio("sound/music1.mp3");
-MyAudio.play();
 
 mySlider.oninput = function() {
 myValueText.innerHTML = parseInt(mySlider.value);
@@ -19,6 +18,7 @@ myValueText.innerHTML = parseInt(mySlider.value);
 
 // Fonction quand on appui sur le btn...
 function CheckTheResult() {
+    MyAudio.play();
     let chiffreDuJoueur=parseInt(mySlider.value);
     tentativeRestante--;
     elementTexteIlVousReste.innerHTML = `il vous reste ${tentativeRestante} tentative(s)`;
