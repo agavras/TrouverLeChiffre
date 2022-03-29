@@ -17,6 +17,7 @@ function CheckTheResult() {
 
     // Si le resultat est bon...
     if (chiffreATrouver === chiffreDuJoueur) {
+        elementTexteWinLoose.style.color="lightgreen";
         elementTexteWinLoose.innerHTML = "YOU WIN";
         DeleteIlVousReste();
     // Si trop bas...
@@ -29,6 +30,7 @@ function CheckTheResult() {
 
     // Si le joueur n'a plus de credit...
     if (tentativeRestante === 0) {
+        elementTexteWinLoose.style.color="red";
         elementTexteWinLoose.innerHTML = "GAME OVER";
         DeleteIlVousReste();
     }

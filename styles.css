@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: small;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: black;
+}
+
+.div1 {
+    background-color: hsl(180, 10%, 50%);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#HTMLid_InputNumber {
+    width: 76px;
+    height: 32px;
+    text-align: center;
+    border-style: none;
+    font-size: 1.5rem;
+    color: hsl(180, 10%, 30%);
+    background-color: hsl(33, 64%, 84%);
+
+}
+
+#HTMLidBoutton {
+    width: 80px;
+    height: 32px;
+    border-style: none;
+    font-size: 1.5rem;
+    background-color: hsl(180, 21%, 75%);
+    color: black;
+}
+
+h1 {
+    color: hsl(180, 21%, 21%);
+}
+
+#HTMLid_Texte_IlVousReste{
+    font-size: 1.3rem;
+    color: rgb(210, 210, 210);
+}
+
+#HTMLid_Texte_YouWinOrLoose {
+    font-size: 3.5rem;
+    color: hsl(30, 50%, 75%);
+}
