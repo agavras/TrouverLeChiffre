@@ -34,13 +34,13 @@ function CheckTheResult() {
         MyAudio.play();
         elementTexteIlVousReste.className="animate__animated animate__bounceOutDown animate__1";
         btn.className="animate__animated animate__bounceOut animate__1";
-        myValueText.innerHTML = " ";
+        myValueText.className="animate__animated animate__bounceOut animate__1";
     // Si trop bas...
     } else if (chiffreATrouver > chiffreDuJoueur) {
         elementTexteWinLoose.innerHTML = "Trop petit";
     // Si trop haut...
     } else if (chiffreATrouver < chiffreDuJoueur) {
-        elementTexteWinLoose.className="animate__animated animate__bounceOut animate__1";
+        elementTexteWinLoose.innerHTML = "Trop grand";
     }
 
     // Si le joueur n'a plus de credit...
