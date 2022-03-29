@@ -11,7 +11,7 @@ body {
 }
 
 .div1 {
-    background-color: hsl(180, 10%, 50%);
+    background-color: hsl(180, 25%, 50%);
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -23,7 +23,7 @@ body {
 
 #HTMLid_InputNumber {
     border-radius: 25px;
-    width: 120px;
+    width: 200px;
     height: 64px;
     text-align: center;
     border-style: none;
@@ -35,8 +35,8 @@ body {
 
 #HTMLidBoutton {
     border-radius: 25px;
-    width: 120px;
-    height: 50px;
+    width: 200px;
+    height: 64px;
     border-style: none;
     font-size: 1.5rem;
     background-color: hsl(180, 21%, 75%);
@@ -60,8 +60,8 @@ h1 {
 
 .slider {
     -webkit-appearance: none;
-    width: 300px;
-    height: 50px;
+    width: 200px;
+    height: 64px;
     border-radius: 25px;  
     background: #d3d3d3;
     outline: none;
