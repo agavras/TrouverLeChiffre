@@ -22,8 +22,9 @@ body {
 }
 
 #HTMLid_InputNumber {
-    width: 76px;
-    height: 32px;
+    border-radius: 25px;
+    width: 120px;
+    height: 64px;
     text-align: center;
     border-style: none;
     font-size: 1.5rem;
@@ -33,8 +34,9 @@ body {
 }
 
 #HTMLidBoutton {
-    width: 80px;
-    height: 32px;
+    border-radius: 25px;
+    width: 120px;
+    height: 50px;
     border-style: none;
     font-size: 1.5rem;
     background-color: hsl(180, 21%, 75%);
@@ -47,11 +49,11 @@ h1 {
 }
 
 #HTMLid_Texte_IlVousReste{
-    font-size: 1.3rem;
-    color: rgb(210, 210, 210);
+    font-size: 2rem;
+    color: hsl(293, 80%, 85%);
 }
 
 #HTMLid_Texte_YouWinOrLoose {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: hsl(30, 50%, 75%);
 }
